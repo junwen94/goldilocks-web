@@ -1,54 +1,101 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.container {
-  position: relative;
-  width: 50%;
-}
-
-.image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #008CBA;
-  overflow: hidden;
-  width: 0;
-  height: 100%;
-  transition: .5s ease;
-}
-
-.container:hover .overlay {
-  width: 100%;
-}
-
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-}
-</style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Goldilocks</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<div class="page">
+  <nav class="nav">
+    <div class="wrap">
+      <div class="brand">
+        <img src="assets/logo-splash.png" alt="Goldilocks logo" />
+        <span>Goldilocks</span>
+      </div>
+      <div class="navlinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="core.html">Core</a>
+        <a href="agent.html">Agent</a>
+        <a href="#">Docs</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </nav>
 
-<h2>welcome to goldilocks!</h2>
-<p>This is a placeholder for EPSRC funded <a href="https://ukerc.rl.ac.uk/cgi-bin/ercri4.pl?GChoose=gdets&GRN=EP/Z530657/1">
-  Goldilocks Project</a></p>
+  <div class="split">
+    <div class="split-left">
+      <div class="brand-center">
+        <img class="hero-mark" src="assets/logo-splash.png" alt="Goldilocks" />
+        <h1>Goldilocks</h1>
+        <p class="slogan">Towards Smarter &amp; Greener Materials Simulations</p>
+        <p class="intro">Goldilocks is an open ecosystem that turns an atomic structure into a ready-to-run DFT calculation — real simulation data, trained models, and deterministic parameter selection, chained end to end.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="core.html">Open Workbench<span class="pilot-badge">Pilot</span></a>
+          <a class="btn btn-secondary" href="agent.html">Try Agent Online<span class="pilot-badge">Pilot</span></a>
+          <a class="btn btn-secondary" href="agent.html">Download Agent<span class="pilot-badge">Pilot</span></a>
+        </div>
+      </div>
+      <div class="affiliation">
+        <a href="https://www.sc.stfc.ac.uk/" target="_blank" rel="noopener noreferrer">
+          <img class="scd-logo" src="assets/logo-alt.svg" alt="UKRI-STFC Scientific Computing Department" />
+        </a>
+        <div class="affiliation-text">
+          <div class="line">Developed at <a href="https://www.sc.stfc.ac.uk/" target="_blank" rel="noopener noreferrer">UKRI-STFC Scientific Computing Department</a></div>
+          <div class="line">Funded by <a href="https://www.adalovelacecentre.ac.uk/" target="_blank" rel="noopener noreferrer">Ada Lovelace Centre</a> and <a href="https://gtr.ukri.org/projects?ref=EP%2FZ530657%2F1" target="_blank" rel="noopener noreferrer">EPSRC</a></div>
+        </div>
+      </div>
+    </div>
 
+    <div class="split-right">
+      <div class="split-row card-data">
+        <div class="icon icon-data">◆</div>
+        <div class="kicker">goldilocks-data</div>
+        <h2>Data</h2>
+        <p class="tagline">Runs real DFT calculations at scale, producing convergence-tested datasets that every downstream model is trained on.</p>
+        <div class="links">
+          <a href="https://github.com/stfc/goldilocks-data" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://stfc.github.io/goldilocks-data/" target="_blank" rel="noopener noreferrer">Docs ↗</a>
+        </div>
+      </div>
+
+      <div class="split-row card-ml">
+        <div class="icon icon-ml">◈</div>
+        <div class="kicker">goldilocks-ml</div>
+        <h2>Machine Learning</h2>
+        <p class="tagline">Trains on those datasets and publishes versioned model artifacts, each with a clearly defined domain of applicability.</p>
+        <div class="links">
+          <a href="https://github.com/stfc/goldilocks-ml" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://stfc.github.io/goldilocks-ml/" target="_blank" rel="noopener noreferrer">Docs ↗</a>
+        </div>
+      </div>
+
+      <div class="split-row card-core">
+        <div class="icon icon-core">◉</div>
+        <div class="kicker">goldilocks-core</div>
+        <h2>Core</h2>
+        <p class="tagline">Turns a structure into DFT parameters, input files, and submission scripts — deterministic, and every value traceable to its source.</p>
+        <div class="links">
+          <a href="https://github.com/stfc/goldilocks-core" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://stfc.github.io/goldilocks-core/" target="_blank" rel="noopener noreferrer">Docs ↗</a>
+          <a href="core.html">Workbench &rsaquo;</a>
+        </div>
+      </div>
+
+      <div class="split-row card-agent">
+        <div class="icon icon-agent">◐</div>
+        <div class="kicker">goldilocks-agent · Coming soon</div>
+        <h2>Agent</h2>
+        <p class="tagline">LLM-orchestrated workflows, post-processing, and explanations.</p>
+        <div class="links">
+          <a class="muted" href="#">GitHub</a>
+          <a class="muted" href="#">Docs</a>
+          <a href="agent.html">Download &rsaquo;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
-
