@@ -16,10 +16,31 @@
       </div>
       <div class="navlinks">
         <a href="index.html">Home</a>
-        <a href="core.html" class="active">Core</a>
-        <a href="agent.html">Agent</a>
-        <a href="#">Docs</a>
-        <a href="#">GitHub</a>
+
+        <div class="nav-item">
+          <span class="nav-trigger active">Explore <span class="chevron">▾</span></span>
+          <div class="dropdown">
+            <div class="dropdown-inner">
+              <a href="https://github.com/stfc/goldilocks-data" target="_blank" rel="noopener noreferrer">Data</a>
+              <a href="https://github.com/stfc/goldilocks-ml" target="_blank" rel="noopener noreferrer">ML</a>
+              <a href="core.html" class="active">Core</a>
+              <a href="agent.html">Agent</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <span class="nav-trigger">Resources <span class="chevron">▾</span></span>
+          <div class="dropdown">
+            <div class="dropdown-inner">
+              <a href="agent.html">Install</a>
+              <a href="#">Docs</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="#">Contact</a>
+        <a href="#" data-about-open>About</a>
       </div>
     </div>
   </nav>
@@ -50,6 +71,52 @@
       </div>
     </div>
   </div>
+
+  <div class="about-overlay" id="about-overlay">
+    <div class="about-modal">
+      <button class="about-close" type="button" aria-label="Close" data-about-close>&times;</button>
+      <div class="about-kicker">The Goldilocks Project</div>
+      <h2>Overview</h2>
+      <p>The Goldilocks project focuses on improving the efficiency and responsible use of computing resources in Density Functional Theory (DFT) calculations. DFT is a crucial method in materials and molecular science, supporting the R&amp;D of functional materials for environmental sustainability.</p>
+      <p>DFT-based research consumes a significant amount of resources on supercomputers worldwide, including a substantial portion of the UK's national supercomputing service, ARCHER2. As computing power increases, the environmental impact of DFT-based research grows, making it essential to optimize its efficiency.</p>
+      <p>This project aims to provide practical tools and evidence-based best practices for researchers and the compute-resources distribution chain.</p>
+
+      <h3>The Challenge</h3>
+      <p>DFT calculations involve numerical approximations that require careful convergence. Inexperienced users may either over-converge, leading to unnecessarily costly calculations, or under-converge, resulting in useless calculations. Both scenarios waste valuable compute resources and electricity. It is estimated that a significant proportion of DFT calculations suffer from such inefficiencies.</p>
+
+      <h3>Solution</h3>
+      <p>The Goldilocks project will develop a tool and evidence-based best practices to guide researchers in making the optimal ('Goldilocks') choice of convergence parameters. This will be achieved by:</p>
+      <ul>
+        <li>Training machine learning (ML) models to predict the convergence parameters for DFT numerical approximations, tailored to the required accuracy in common scientific investigations.</li>
+        <li>Creating a tool applicable across all DFT codes commonly used in the UK.</li>
+      </ul>
+
+      <h3>Expected Outcomes</h3>
+      <ul>
+        <li>Significantly increased efficiency and assurance levels in the use of UKRI and EPSRC hardware and software infrastructure.</li>
+        <li>Reduction in wasted compute resources, leading to substantial improvements in the environmental sustainability of research infrastructure.</li>
+        <li>Quantification and extrapolation of efficiency gains.</li>
+        <li>Dissemination of best practices globally.</li>
+        <li>Advancement towards ML-based automatic generation of inputs for DFT calculations.</li>
+        <li>Automatic a priori calculation of compute resources and carbon footprint.</li>
+        <li>Democratization of DFT research.</li>
+      </ul>
+
+      <h3>People</h3>
+      <ul class="about-people">
+        <li><span>Alin Marin Elena</span><span class="role">Principal Investigator</span></li>
+        <li><span>Susmita Basak</span><span class="role">Co-Investigator</span></li>
+        <li><span>Junwen Yin</span><span class="role"></span></li>
+        <li><span>Gilberto Teobaldi</span><span class="role"></span></li>
+        <li><span>Samuel Pinilla</span><span class="role"></span></li>
+        <li><span>Jaehoon Cha</span><span class="role"></span></li>
+      </ul>
+
+      <h3>Organisations</h3>
+      <p>Lead Research Organisation: STFC — Laboratories<br />Department: Scientific Computing Department</p>
+    </div>
+  </div>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
