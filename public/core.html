@@ -14,67 +14,87 @@
         <img src="assets/logo-splash.png" alt="Goldilocks logo" />
         <span>Goldilocks</span>
       </div>
-      <div class="navlinks">
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navlinks" data-nav-panel>
         <a href="index.html">Home</a>
 
         <div class="nav-item">
-          <span class="nav-trigger active">Explore <span class="chevron">▾</span></span>
+          <span class="nav-trigger active" data-nav-item-trigger>Explore <span class="chevron">▾</span></span>
           <div class="dropdown">
             <div class="dropdown-inner">
-              <a href="https://github.com/stfc/goldilocks-data" target="_blank" rel="noopener noreferrer">Data</a>
-              <a href="https://github.com/stfc/goldilocks-ml" target="_blank" rel="noopener noreferrer">ML</a>
-              <a href="core.html" class="active">Core</a>
-              <a href="agent.html">Agent</a>
+              <a href="https://stfc.github.io/goldilocks-data/" target="_blank" rel="noopener noreferrer">Data</a>
+              <a href="https://stfc.github.io/goldilocks-ml/" target="_blank" rel="noopener noreferrer">ML</a>
+              <a href="https://stfc.github.io/goldilocks-core/" target="_blank" rel="noopener noreferrer" class="active">Core</a>
+              <a href="https://stfc.github.io/goldilocks-agent/" target="_blank" rel="noopener noreferrer">Agent</a>
             </div>
           </div>
         </div>
 
         <div class="nav-item">
-          <span class="nav-trigger">Resources <span class="chevron">▾</span></span>
+          <span class="nav-trigger" data-nav-item-trigger>Resources <span class="chevron">▾</span></span>
           <div class="dropdown">
             <div class="dropdown-inner">
               <a href="agent.html">Install</a>
-              <a href="#">Docs</a>
+              <a href="https://stfc.github.io/goldilocks-agent/" target="_blank" rel="noopener noreferrer">Docs</a>
             </div>
           </div>
         </div>
 
-        <a href="#">Contact</a>
-        <a href="#" data-about-open>About</a>
+        <a href="#" data-overlay-open="contact-overlay">Contact</a>
+        <a href="#" data-overlay-open="about-overlay">About</a>
       </div>
     </div>
   </nav>
 
-  <div class="sub-split">
-    <div class="sub-left">
-      <div class="tag">goldilocks-core</div>
-      <h1>Structure in.<br />Input files out.</h1>
-      <p>Upload a structure and get DFT parameters, input files, and a submission script in one step.</p>
-      <a class="btn btn-primary" href="#">Launch Workbench</a>
-    </div>
+  <section class="sub-hero">
+    <div class="wrap sub-hero-inner">
+      <div class="sub-left">
+        <div class="tag">goldilocks-core</div>
+        <h1>Structure in.<br />Input files out.</h1>
+        <p>Upload a structure and get DFT parameters, input files, and a submission script in one step.</p>
+        <a class="btn btn-primary" href="#">Launch Workbench</a>
+      </div>
 
-    <div class="sub-right">
-      <div class="app-visual">Workbench preview placeholder</div>
-      <div class="feature-list">
-        <div class="feature">
-          <h4>Structure viewer</h4>
-          <p>Interactive crystal / molecule rendering — upload and inspect.</p>
+      <div class="sub-right">
+        <div class="app-mock">
+          <div class="app-mock-bar"><span></span><span></span><span></span></div>
+          <div class="app-mock-body">
+            <div class="app-mock-panel"><span></span><span></span><span></span><span></span></div>
+            <div class="app-mock-canvas"></div>
+          </div>
         </div>
-        <div class="feature">
-          <h4>Deterministic priority</h4>
-          <p>human &gt; ml &gt; llm &gt; heuristic — every value is traceable to its source.</p>
-        </div>
-        <div class="feature">
-          <h4>One-click export</h4>
-          <p>Produces input files and a submission script, ready to queue.</p>
+        <div class="feature-list">
+          <div class="feature">
+            <span class="bullet"></span>
+            <div>
+              <h4>Structure viewer</h4>
+              <p>Interactive crystal / molecule rendering — upload and inspect.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <span class="bullet"></span>
+            <div>
+              <h4>Deterministic priority</h4>
+              <p>human &gt; ml &gt; llm &gt; heuristic — every value is traceable to its source.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <span class="bullet"></span>
+            <div>
+              <h4>One-click export</h4>
+              <p>Produces input files and a submission script, ready to queue.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <div class="about-overlay" id="about-overlay">
     <div class="about-modal">
-      <button class="about-close" type="button" aria-label="Close" data-about-close>&times;</button>
+      <button class="about-close" type="button" aria-label="Close" data-overlay-close>&times;</button>
       <div class="about-kicker">The Goldilocks Project</div>
       <h2>Overview</h2>
       <p>The Goldilocks project focuses on improving the efficiency and responsible use of computing resources in Density Functional Theory (DFT) calculations. DFT is a crucial method in materials and molecular science, supporting the R&amp;D of functional materials for environmental sustainability.</p>
@@ -114,6 +134,49 @@
 
       <h3>Organisations</h3>
       <p>Lead Research Organisation: STFC — Laboratories<br />Department: Scientific Computing Department</p>
+    </div>
+  </div>
+
+  <div class="about-overlay" id="contact-overlay">
+    <div class="about-modal contact-modal">
+      <button class="about-close" type="button" aria-label="Close" data-overlay-close>&times;</button>
+      <div class="about-kicker">The Goldilocks Project</div>
+      <h2>Contact</h2>
+      <p>Reach out to the team directly.</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <img src="assets/team/alin-marin-elena.jpg" alt="Alin-Marin Elena" />
+          <h4>Alin-Marin Elena</h4>
+          <div class="role">Project Lead</div>
+          <a href="mailto:alin-marin.elena@stfc.ac.uk">alin-marin.elena@stfc.ac.uk</a>
+        </div>
+        <div class="contact-card">
+          <img src="assets/team/susmita-basak.jpg" alt="Susmita Basak" />
+          <h4>Susmita Basak</h4>
+          <div class="role">Project Co-lead</div>
+          <a href="mailto:susmita.basak@stfc.ac.uk">susmita.basak@stfc.ac.uk</a>
+        </div>
+        <div class="contact-card">
+          <img src="assets/team/junwen-yin.jpg" alt="Junwen Yin" />
+          <h4>Junwen Yin</h4>
+          <a href="mailto:junwen.yin@stfc.ac.uk">junwen.yin@stfc.ac.uk</a>
+        </div>
+        <div class="contact-card">
+          <img src="assets/team/jaehoon-cha.jpg" alt="Jaehoon Cha" />
+          <h4>Jaehoon Cha</h4>
+          <a href="mailto:Jaehoon.Cha@stfc.ac.uk">Jaehoon.Cha@stfc.ac.uk</a>
+        </div>
+        <div class="contact-card">
+          <img src="assets/team/willow-sparks.jpg" alt="Willow Sparks" />
+          <h4>Willow Sparks</h4>
+          <a href="mailto:willow.sparks@stfc.ac.uk">willow.sparks@stfc.ac.uk</a>
+        </div>
+        <div class="contact-card">
+          <img src="assets/team/gilberto-teobaldi.jpg" alt="Gilberto Teobaldi" />
+          <h4>Gilberto Teobaldi</h4>
+          <a href="mailto:gilberto.teobaldi@stfc.ac.uk">gilberto.teobaldi@stfc.ac.uk</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

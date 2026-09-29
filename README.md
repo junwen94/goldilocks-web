@@ -14,10 +14,10 @@ No build step required. Either open `public/index.html` directly in a browser, o
 
 ```sh
 cd public
-python3 -m http.server 8000
+python3 -m http.server 8001
 ```
 
-Then visit `http://localhost:8000/index.html`.
+Then visit `http://localhost:8001/index.html`.
 
 ## Note on this branch
 

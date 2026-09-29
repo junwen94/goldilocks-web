@@ -14,82 +14,93 @@
         <img src="assets/logo-splash.png" alt="Goldilocks logo" />
         <span>Goldilocks</span>
       </div>
-      <div class="navlinks">
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navlinks" data-nav-panel>
         <a href="index.html">Home</a>
 
         <div class="nav-item">
-          <span class="nav-trigger active">Explore <span class="chevron">▾</span></span>
+          <span class="nav-trigger active" data-nav-item-trigger>Explore <span class="chevron">▾</span></span>
           <div class="dropdown">
             <div class="dropdown-inner">
-              <a href="https://github.com/stfc/goldilocks-data" target="_blank" rel="noopener noreferrer">Data</a>
-              <a href="https://github.com/stfc/goldilocks-ml" target="_blank" rel="noopener noreferrer">ML</a>
-              <a href="core.html">Core</a>
-              <a href="agent.html" class="active">Agent</a>
+              <a href="https://stfc.github.io/goldilocks-data/" target="_blank" rel="noopener noreferrer">Data</a>
+              <a href="https://stfc.github.io/goldilocks-ml/" target="_blank" rel="noopener noreferrer">ML</a>
+              <a href="https://stfc.github.io/goldilocks-core/" target="_blank" rel="noopener noreferrer">Core</a>
+              <a href="https://stfc.github.io/goldilocks-agent/" target="_blank" rel="noopener noreferrer" class="active">Agent</a>
             </div>
           </div>
         </div>
 
         <div class="nav-item">
-          <span class="nav-trigger">Resources <span class="chevron">▾</span></span>
+          <span class="nav-trigger" data-nav-item-trigger>Resources <span class="chevron">▾</span></span>
           <div class="dropdown">
             <div class="dropdown-inner">
-              <a href="agent.html">Install</a>
-              <a href="#">Docs</a>
+              <a href="agent.html" class="active">Install</a>
+              <a href="https://stfc.github.io/goldilocks-agent/" target="_blank" rel="noopener noreferrer">Docs</a>
             </div>
           </div>
         </div>
 
-        <a href="#">Contact</a>
-        <a href="#" data-about-open>About</a>
+        <a href="#" data-overlay-open="contact-overlay">Contact</a>
+        <a href="#" data-overlay-open="about-overlay">About</a>
       </div>
     </div>
   </nav>
 
-  <div class="sub-split">
-    <div class="sub-left">
-      <div class="tag">goldilocks-agent · Coming soon</div>
-      <h1>Hand the workflow<br />to natural language</h1>
-      <p>LLM-orchestrated scientific workflows, automated post-processing, and plain-language explanations. Requires an API key.</p>
-      <a class="btn btn-secondary disabled" href="#">Try Online — Coming soon</a>
+  <section class="sub-hero">
+    <div class="wrap sub-hero-inner">
+      <div class="sub-left">
+        <div class="tag">goldilocks-agent · Coming soon</div>
+        <h1>Hand the workflow<br />to natural language</h1>
+        <p>LLM-orchestrated scientific workflows, automated post-processing, and plain-language explanations. Requires an API key.</p>
+        <a class="btn btn-secondary disabled" href="#">Try Online — Coming soon</a>
+      </div>
+
+      <div class="sub-right">
+        <div class="download-row">
+          <div class="download-item">
+            <div class="os-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v11M7 8l5-5 5 5M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>macOS</h3>
+            <div class="ver">Coming soon</div>
+          </div>
+          <div class="download-item">
+            <div class="os-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v11M7 8l5-5 5 5M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Linux</h3>
+            <div class="ver">Coming soon</div>
+          </div>
+          <div class="download-item">
+            <div class="os-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v11M7 8l5-5 5 5M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Windows</h3>
+            <div class="ver">Coming soon</div>
+          </div>
+        </div>
+
+        <div class="install-snippet">
+          <span class="prompt">$</span>curl -fsSL https://get.goldilocks.dev/agent | sh
+        </div>
+
+        <div class="waitlist">
+          <h3>Get early access</h3>
+          <p>Leave your email and we'll notify you at launch.</p>
+          <form onsubmit="return false;">
+            <input type="email" placeholder="you@example.com" />
+            <button class="btn btn-primary" type="submit">Notify me</button>
+          </form>
+        </div>
+      </div>
     </div>
-
-    <div class="sub-right">
-      <div class="download-row">
-        <div class="download-item">
-          <div class="os-icon">⌘</div>
-          <h3>macOS</h3>
-          <div class="ver">Coming soon</div>
-        </div>
-        <div class="download-item">
-          <div class="os-icon">🐧</div>
-          <h3>Linux</h3>
-          <div class="ver">Coming soon</div>
-        </div>
-        <div class="download-item">
-          <div class="os-icon">⊞</div>
-          <h3>Windows</h3>
-          <div class="ver">Coming soon</div>
-        </div>
-      </div>
-
-      <div class="install-snippet">
-        <span class="prompt">$</span>curl -fsSL https://get.goldilocks.dev/agent | sh
-      </div>
-
-      <div class="waitlist">
-        <h3>Get early access</h3>
-        <p>Leave your email and we'll notify you at launch.</p>
-        <form onsubmit="return false;">
-          <input type="email" placeholder="you@example.com" />
-          <button class="btn btn-primary" type="submit">Notify me</button>
-        </form>
-      </div>
-    </div>
-  </div>
+  </section>
 
   <div class="about-overlay" id="about-overlay">
     <div class="about-modal">
-      <button class="about-close" type="button" aria-label="Close" data-about-close>&times;</button>
+      <button class="about-close" type="button" aria-label="Close" data-overlay-close>&times;</button>
       <div class="about-kicker">The Goldilocks Project</div>
       <h2>Overview</h2>
       <p>The Goldilocks project focuses on improving the efficiency and responsible use of computing resources in Density Functional Theory (DFT) calculations. DFT is a crucial method in materials and molecular science, supporting the R&amp;D of functional materials for environmental sustainability.</p>
@@ -129,6 +140,49 @@
 
       <h3>Organisations</h3>
       <p>Lead Research Organisation: STFC — Laboratories<br />Department: Scientific Computing Department</p>
+    </div>
+  </div>
+
+  <div class="about-overlay" id="contact-overlay">
+    <div class="about-modal contact-modal">
+      <button class="about-close" type="button" aria-label="Close" data-overlay-close>&times;</button>
+      <div class="about-kicker">The Goldilocks Project</div>
+      <h2>Contact</h2>
+      <p>Reach out to the team directly.</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <img src="assets/team/alin-marin-elena.jpg" alt="Alin-Marin Elena" />
+          <h4>Alin-Marin Elena</h4>
+          <div class="role">Project Lead</div>
+          <a href="mailto:alin-marin.elena@stfc.ac.uk">alin-marin.elena@stfc.ac.uk</a>
+        </div>
+        <div class="contact-card">
+          <img src="assets/team/susmita-basak.jpg" alt="Susmita Basak" />
+          <h4>Susmita Basak</h4>
+          <div class="role">Project Co-lead</div>
+          <a href="mailto:susmita.basak@stfc.ac.uk">susmita.basak@stfc.ac.uk</a>
+        </div>
+        <div class="contact-card">
+          <img src="assets/team/junwen-yin.jpg" alt="Junwen Yin" />
+          <h4>Junwen Yin</h4>
+          <a href="mailto:junwen.yin@stfc.ac.uk">junwen.yin@stfc.ac.uk</a>
+        </div>
+        <div class="contact-card">
+          <img src="assets/team/jaehoon-cha.jpg" alt="Jaehoon Cha" />
+          <h4>Jaehoon Cha</h4>
+          <a href="mailto:Jaehoon.Cha@stfc.ac.uk">Jaehoon.Cha@stfc.ac.uk</a>
+        </div>
+        <div class="contact-card">
+          <img src="assets/team/willow-sparks.jpg" alt="Willow Sparks" />
+          <h4>Willow Sparks</h4>
+          <a href="mailto:willow.sparks@stfc.ac.uk">willow.sparks@stfc.ac.uk</a>
+        </div>
+        <div class="contact-card">
+          <img src="assets/team/gilberto-teobaldi.jpg" alt="Gilberto Teobaldi" />
+          <h4>Gilberto Teobaldi</h4>
+          <a href="mailto:gilberto.teobaldi@stfc.ac.uk">gilberto.teobaldi@stfc.ac.uk</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
